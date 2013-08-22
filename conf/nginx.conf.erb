@@ -96,14 +96,8 @@ http {
 		} 
 	}
 	# lqa end add
-	# lqa add deny connect to file
-	location /elogsp.txt { 
-		deny all; 
-	} 
-	location /elogs_sysp.txt { 
-		deny all;
-	}
-	# lqa end add
+	
+
     # rewrite         ^(.+)$ /index.php?q=$1 last;
 
     #  # Add trailing slash to */wp-admin requests.
