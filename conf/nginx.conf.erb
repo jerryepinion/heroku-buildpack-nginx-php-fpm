@@ -92,7 +92,7 @@ http {
 	# lqa add : using for PHP-FastCGI
 	location / { 
 		if (!-e $request_filename){  
-			rewrite ^/(.*)\.php $1 redirect;
+			rewrite ^(.*)$ /$1.php redirect; 
 		} 
 	}
 	# lqa end add
