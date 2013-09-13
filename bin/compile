@@ -290,5 +290,5 @@ fi
 EOF
 chmod +x boot.sh
 echo "-----> Report deployment to newrelic"
-curl -H "x-api-key:8fbe313417e5b57b5d30eb1d2307a731d0591a5f85ed395" -d "deployment[app_name]=PHP Application" https://rpm.newrelic.com/deployments.xml
+curl -H "x-api-key:1a6b839379511dbb8e8fd104f6d2588736e18d21" -d "deployment[app_name]=Epinion SP - Staging" https://rpm.newrelic.com/deployments.xml
 echo "-----> Done with compile"
