@@ -10,10 +10,10 @@ LIBMCRYPT_VERSION=2.5.8
 LIBMEMCACHED_VERSION=1.0.7
 PHP_VERSION=5.4.12
 NEWRELIC_VERSION=2.9.5.78
-S3_BUCKET=heroku-buildpack-php-tyler
+S3_BUCKET=VN-SP-HEROKU/heroku-buildpack-nginx-php-fpm
 # END CONFIG
 
-#
+#https://s3.amazonaws.com/VN-SP-HEROKU/heroku-buildpack-nginx-php-fpm/nginx-1.4.1-heroku.tar.gz
 S3_URL="https://s3.amazonaws.com/${S3_BUCKET}"
 
 MANIFEST_FILE="manifest.md5sum"
@@ -289,6 +289,8 @@ fi
 /app/vendor/nginx/sbin/nginx
 EOF
 chmod +x boot.sh
+
 echo "-----> Report deployment to newrelic"
 curl -H "x-api-key:82c06c4d81e85e7d879c5baf584dedb50114f1576e18d21" -d "deployment[app_name]=Epinion SP - Staging" https://rpm.newrelic.com/deployments.xml
+
 echo "-----> Done with compile"
