@@ -39,6 +39,7 @@ http {
   index             index.php index.html index.htm;
 
   server {
+	charset utf-8;
     listen            <%= ENV['PORT'] %>;
     server_name       _;
 	# lqan add
