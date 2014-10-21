@@ -13,6 +13,17 @@ http {
   server_tokens       off;
   keepalive_timeout   65;
   gzip                on;
+  
+  gzip_comp_level 6;
+  #gzip_comp_level 9;
+  gzip_min_length  1100;
+  gzip_buffers 16 8k;
+  gzip_proxied any;
+  # gzip_http_version 1.1;
+  gzip_types       text/plain application/xml text/css text/js text/xml application/x-javascript text/javascript application/json application/xml+rss;
+    
+
+  
   access_log          off;
   error_log           logs/error.log;
   proxy_max_temp_file_size	0;
@@ -39,7 +50,7 @@ http {
   index             index.php index.html index.htm;
 
   server {
-	charset utf-8;
+    charset utf-8;
     listen            <%= ENV['PORT'] %>;
     server_name       _;
 	# lqan add
@@ -124,7 +135,10 @@ http {
       fastcgi_pass    php_fpm;
       fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
+<<<<<<< HEAD
 	
+=======
+>>>>>>> master
 	# enable gzipgzip on;
     gzip_min_length  1100;
     gzip_buffers  4 32k;
